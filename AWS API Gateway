@@ -1,0 +1,28 @@
+Flow:
+1. Client calls to HTTP API.
+2. API Gateway routes the request to Lambda function.
+3. Lambda runs the Lambda function and returns a response to API Gateway.
+4. API Gateway then returns a response to client.
+
+Setup:
+1. Create a Lambda function.
+2. Create an HTTP API.
+
+Create a Lambda function:
+1. Sign in to the Lambda console at https://console.aws.amazon.com/lambda.
+2. Create function.
+ example of default Lambda function:
+ exports.handler = async (event) => {
+    const response = {
+        statusCode: 200,
+        body: JSON.stringify('Hello from Lambda!'),
+    };
+    return response;
+};
+
+Create an HTTP API:
+1. Sign in to the API Gateway console at https://console.aws.amazon.com/apigateway.
+2. Select Build for first time create or Create if already got API before.
+3. Add integration and choose Lambda.
+4. Enter name for Lambda function and API name, and lastly Create.
+

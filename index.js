@@ -11,7 +11,7 @@
 //     res.send("Route for '/hello'");
 // })
 
-// /*
+// /* NOTE
 // app.listen(port,[host],[backlog],[callback])
 // Host = Name of domain
 // Backlog = The max number of queued pending connections. (511)
@@ -35,7 +35,7 @@
 // var express = require('express');
 // var app = express();
 
-// /*
+// /* NOTE
 // Route param = /:[var]
 // Variable param = req.params.[var]
 
@@ -52,13 +52,47 @@
 
 // Test 04 Arrow Function
 
-var express = require('express');
-var app = express();
+// var express = require('express');
+// var app = express();
 
-app.get("/", (req,res) => {
-    res.send("home");
-});
+/* NOTE
+Normal function
+function doSomething() {
+    //logic
+}
 
-var PORT = process.env.PORT || 3000;
-app.listen(PORT);
+Arrow Function
+const doSth = () => {
+    //logic
+}
+
+const doSth = () => console.log('Single Line Arrow Function')
+
+If function only do return statement,
+
+const doSth = () => 'Return in single line';
+console.log(doSth());
+
+Passing Arguments:
+const add = num => {
+    const a = 5;
+    return num + a;
+}
+-or-
+const add = num => num + 5;
+
+const add = (num1, num2) => num1 + num2;
+console.log(add(4, 6));
+
+*/
+
+// app.get("/", (req,res) => {
+//     res.send("home");
+// });
+
+// var PORT = process.env.PORT || 3000;
+// app.listen(PORT);
+
+// Test 05
+
 

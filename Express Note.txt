@@ -1,0 +1,20 @@
+var express=require('express');
+*using the require function to include the "express module"
+
+var app=express();
+*before start using the express module, need to make an object of it.
+
+app.get('/',function(req,res)
+*callback function
+
+var server=app.listen(3000,function() {});
+-or-
+app.listen(3000);
+*usgin the listen to function to make server application listen to client requests on the port number defined.
+
+Routing determine the way in which an application responds to a client request to a particular endpoint.
+General syntax for a route is "app.METHOD(PATH, HANDLER);
+*app is an instance of the express module
+*METHOD is an HTTP request method (GET, POST, PUT, DELETE)
+*PATH is a path on the server
+*HANDLER is the function executed when the route is matched

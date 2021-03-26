@@ -18,3 +18,7 @@ General syntax for a route is "app.METHOD(PATH, HANDLER);
 *METHOD is an HTTP request method (GET, POST, PUT, DELETE)
 *PATH is a path on the server
 *HANDLER is the function executed when the route is matched
+
+Node vs Nodemon
+Node no monitors for any change
+Nodemon auto restart server, monitors for any changes

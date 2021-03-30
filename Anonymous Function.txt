@@ -1,0 +1,14 @@
+anonyFunc();
+var anonyFunc = function () { // using an anonymous function
+    console.log('anonymous Function');
+}
+
+result: function not found
+-vs-
+
+nameFunc();
+function nameFunc() { // using a named function
+    console.log('named Function');
+}
+
+result: named Function

@@ -10,7 +10,7 @@ app.get('/',function(req,res)
 var server=app.listen(3000,function() {});
 -or-
 app.listen(3000);
-*usgin the listen to function to make server application listen to client requests on the port number defined.
+*using the listen to function to make server application listen to client requests on the port number defined.
 
 Routing determine the way in which an application responds to a client request to a particular endpoint.
 General syntax for a route is "app.METHOD(PATH, HANDLER);

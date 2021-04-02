@@ -1,10 +1,9 @@
 const express = require('express');
 const path = require('path');
-const bodyParser = require('body-parser');
 
 const port = process.argv.slice(2)[0];
 const app = express();
-app.use(bodyParser.json());
+app.use(express.urlencoded({extended: true}));
 
 const positions = [
   { id: 1, name: 'CEO' },
@@ -63,6 +62,12 @@ app.get('/positions', (req, res) => {
   console.log('Returning positions list');
   res.send(positions);
 });
+
+app.post('/chiefs', addChief);
+
+function addChief(req,res){
+  
+}
 
 console.log(`Chiefs service listening on port ${port}`);
 app.listen(port);
